@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'appointment_booking',
+    'about_us',
 
     #tools
     'django_browser_reload',
@@ -55,7 +56,7 @@ INSTALLED_APPS = [
 ]
 
 TAILWIND_APP_NAME = 'theme'
-INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['~']
 
 
 MIDDLEWARE = [

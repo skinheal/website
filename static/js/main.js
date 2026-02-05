@@ -16,3 +16,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// about page 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".fade-up-section");
+
+    const observerOptions = {
+        threshold: 0.2, // triggers when 20% of section is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const elements = entry.target.querySelectorAll(".fade-up-element");
+                elements.forEach(el => {
+                    el.classList.remove("opacity-0");
+                    el.classList.add("animate-fadeInUp");
+                });
+                observer.unobserve(entry.target); // animate only once
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});

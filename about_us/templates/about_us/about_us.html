@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ================= main content ================= -->
+
+<section class="w-full flex justify-center fade-up-section">
+    <div class="w-full max-w-[1220px] h-auto md:h-[500px] flex flex-col md:flex-row bg-green-400 overflow-hidden">
+
+        <!-- Left Side -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-10 bg-green-500 space-y-4">
+            <span class="fade-up-element inline-flex items-center justify-center
+                        bg-white/90 text-green-700 text-sm font-semibold
+                        uppercase tracking-widest
+                        px-5 py-2 rounded-full w-max opacity-0 delay-100">
+                About Us
+            </span>
+
+            <h1 class="fade-up-element text-3xl sm:text-4xl font-bold text-white mb-4 opacity-0 delay-200">
+                Dr. Neha Dongaonkar
+            </h1>
+
+            <p class="fade-up-element text-white text-base sm:text-lg font-medium max-w-full md:max-w-lg leading-relaxed opacity-0 delay-300">
+                Dr. Neha Dongaonkar is a renowned Ayurvedic physician with over 35 years of experience. Founder of Skin Heal Solutions, she specializes in vitiligo, psoriasis, acne, anti-aging, and other skin disorders. Combining modern medicine with Ayurveda, she provides personalized treatments, dietary plans, and formulations for holistic skin health and enhanced patient confidence.
+            </p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="w-full md:w-1/2 flex items-center justify-center p-6 bg-green-600">
+            <img src="{% static 'images/demo.png' %}" 
+                 alt="" 
+                 class="fade-up-element w-full md:w-3/4 object-contain rounded-xl shadow-lg opacity-0 delay-400">
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= second section ================= -->
+
+<section class="w-full flex justify-center mt-12 fade-up-section">
+    <div class="w-[1220px] h-[500px] md:h-[350px] flex flex-col md:flex-row">
+
+        <!-- Left Side -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center px-8 space-y-4">
+            <h1 class="fade-up-element text-3xl md:text-5xl font-bold text-gray-800 mb-4 opacity-0 delay-100">
+                Why Skinheal Solutions?
+            </h1>
+            <p class="fade-up-element text-base md:text-lg text-gray-700 leading-relaxed max-w-md opacity-0 delay-200">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem impedit possimus ratione eius autem beatae! Quod porro ab, officia fugit hic quo nobis dignissimos ut sit. Voluptatum aliquam quam cumque.
+            </p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="w-full md:w-1/2 flex items-center justify-center p-6">
+            <img src="{% static 'images/dummy.jpg' %}" 
+                 alt="Placeholder Image" 
+                 class="fade-up-element w-full h-auto object-contain rounded-xl opacity-0 delay-300">
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

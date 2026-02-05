@@ -1,3 +1,17 @@
 from django.contrib import admin
+from .models import PatientData
 
-# Register your models here.
+@admin.register(PatientData)
+class PatientDataAdmin(admin.ModelAdmin):
+    list_display = (
+        "name",
+        "phone",
+        "email",
+        "branch",
+        "date",
+        "time",
+        "city",
+        "created_at",
+    )
+    search_fields = ("name", "phone", "email")
+    list_filter = ("branch", "date")

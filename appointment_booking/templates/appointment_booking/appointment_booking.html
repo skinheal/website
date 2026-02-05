@@ -1,12 +1,31 @@
 {% extends "layout.html" %}
 {% load static %}
 
+
+
 {% block content %}
+
+<!-- success message -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mb-4 rounded-md px-4 py-3
+                {% if message.tags == 'error' %}
+                    bg-red-100 border border-red-400 text-red-700
+                {% else %}
+                    bg-green-100 border border-green-400 text-green-700
+                {% endif %}
+                ">
+                {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
     <!-- MAIN PAGE CONTENT -->
     <main class>
     <div class="flex items-center justify-center p-12">
     <div class="mx-auto w-full max-w-[550px] bg-white">
-        <form method="POST">
+        <form method="POST" action="{% url 'appoint_book' %}">
+            {% csrf_token %}
         <div class="mb-5">
             <label for="name" class="mb-3 block text-base font-medium text-[#07074D]"> Full Name </label>
             <input type="text" name="name" id="name" placeholder="Full Name" class="w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
@@ -42,9 +61,9 @@
 
             <option value="" disabled selected>Select a branch</option>
             <option value="pune">Pune</option>
-            <option value="pune">Mumbai</option>
-            <option value="pune">Nashik</option>
-            <option value="pune">CSN</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="nashik">Nashik</option>
+            <option value="csn">CSN</option>
             </select>
         </div>
 
@@ -68,7 +87,7 @@
             </div>
             <div class="w-full px-3 sm:w-1/2">
                 <div class="mb-5">
-                <input type="text" name="post-code" id="post_code" placeholder="Post Code" class="w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                <input type="text" name="post_code" id="post_code" placeholder="Post Code" class="w-full rounded-md border border-[#e0e0e0] bg-white px-6 py-3 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
             </div>
             </div>
