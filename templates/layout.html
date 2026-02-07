@@ -60,8 +60,8 @@
                     md:static md:flex md:flex-row md:items-center
                     md:w-auto md:gap-8 md:p-0
                     text-sm font-medium z-50">
-                    <li><a href="#" class="hover:text-green-600 transition-colors">HOME</a></li>
-                    <li><a href="#" class="hover:text-green-600 transition-colors">ABOUT US</a></li>
+                    <li><a href="{% url 'home' %}" class="hover:text-green-600 transition-colors">HOME</a></li>
+                    <li><a href="{% url 'about_us'%}" class="hover:text-green-600 transition-colors">ABOUT US</a></li>
                     <li><a href="#" class="hover:text-green-600 transition-colors">TREATMENTS</a></li>
                     <li><a href="#" class="hover:text-green-600 transition-colors">GALLERY</a></li>
                     <li><a href="#" class="hover:text-green-600 transition-colors">BLOG</a></li>
@@ -93,7 +93,7 @@
                         <img src="{% static '/images/assets/CallLogo.png'%}" class="w-10 hover:opacity-80 transition-opacity">
                     </a>
                 </li>
-                <a href="book/">
+                <a href="{% url 'appoint_book'%}">
                     <button class="w-full md:w-auto px-5 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Book Appointment</button>
                 </a>
                 </ul>
@@ -188,8 +188,8 @@
                             <h5 class="tracking-[1px] text-[#00A850] font-bold text-lg uppercase border-b-2 border-[#F9A428] pb-1">Quick Links</h5>
                         </div>
                         <ul class="list-none space-y-2 mt-4 md:mt-0">
-                            <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="#">Home</a></li>
-                            <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="#">About Us</a></li>
+                            <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="{% url 'home' %}">Home</a></li>
+                            <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="{% url 'about_us' %}">About Us</a></li>
                             <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="#">Treatments</a></li>
                             <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="#">Gallery</a></li>
                             <li><a class="font-bold text-gray-600 hover:text-[#C51D23] hover:pl-1 transition-all duration-300" href="#">Blog</a></li>

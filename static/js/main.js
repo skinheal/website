@@ -44,3 +44,21 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section);
     });
 });
+
+// 3rd file 
+
+// toggle theme switch if user prefers "dark"
+let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+if (theme == 'light') {
+    const maskEl = document.querySelector("#theme-mask");
+    
+    // remove transition so user doesn't get flicker  
+    maskEl.style.transition ="0ms";
+    
+    document.querySelector("#theme").checked = false;
+  
+    // add transition hack after short delay
+    setTimeout(() => maskEl.style.transition ="500ms",1000);
+  
+    
+}
